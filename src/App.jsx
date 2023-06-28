@@ -1,22 +1,34 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Prueba from './components/prueba'
-import Auth from './components/auth/Auth'
+import Auth from './components/Auth/Auth'
+import Home from './components/Home/Home';
+import Error from './views/Error/Error';
+import Checkout from './components/Checkout/Checkout';
+import Header from './components/Header/Header';
+import PrivateRoutes from './layout/PrivateRoutes';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
 
 function App() {
   //AGREGAR SCSS, REACTQUERY, FORMIK, YUP, MUI, FIREBASE(STORE - AUTH), MOCHAPI(MÁS ADELANTE PROBAR API DE VUELO)
 
   return (
     <>
-    <div>
-      <h1 className='title'>Probando el título</h1>
-      <h2 className='subtitle'>Probando el Subtítulo</h2>
-      <p className='text'>Probando el text</p>
-      <p className='sm-text'>Probando el texto pequeño</p>
-      <Auth/>
-    </div>
+    <Router>
+      <Header/>
+      <Routes>
+        {/* Public Routes */}
+        <Route path='/' element={<Home/>}/>
+        <Route path='/auth' element={<Auth/>}/>
+        <Route path='*' element={<Error/>}/>
+        {/* Private Routes */}
+        <Route element={<PrivateRoutes/>}>
+          <Route path='/checkout' element={<Checkout/>}/>
+        </Route>
+      </Routes>
+    </Router> 
     </>
   )
 }
+
+      
 
 export default App

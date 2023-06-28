@@ -6,9 +6,9 @@
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
   margin: 0px;
-  /* scroll-padding-top: 4rem; */
-  /* scrollbar-color: var(--orange-clr) rgba(255, 0, 0, 0);
-  scrollbar-width: thin; */
+  scroll-padding-top: 4rem; 
+  scrollbar-color: var(--accent-clr) rgba(255, 0, 0, 0);
+  scrollbar-width: thin; 
 }
 
 :root{
@@ -18,15 +18,21 @@
   --text: clamp(.9rem, 4vw + 1rem, 1rem);
   --sm-text:  clamp(.6rem, 4vw + 1rem, .8rem);
 
-  /* COLOURS */
-
-  
+  /* COLORS */
+  --accent-clr: #fcbe1c;
+  --light-accent-clr: color-mix(in srgb, var(--accent-clr) 80%, white);
+  --purple-clr: #813e9b;
+  --white-clr: #fbfafb;
+  --light-grey-clr: #fbfafb;
+  --grey-clr: #626780;
+  --dark-clr: #2f3042;
 }
 
 body {
   display: flex;
   place-content: center;
 }
+
 .title{
   font-size: var(--title);
 }

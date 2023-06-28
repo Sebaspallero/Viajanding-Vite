@@ -1,0 +1,143 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: white;
+    box-shadow: 0 .5rem 1.3rem rgba(63, 62, 62, 0.2);
+
+}
+
+.marquee-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#f4f4f4;
+    padding: .5em 0em;
+    width: 100%;
+}
+
+.marquee-link{
+    color: rgb(209, 209, 3);
+}
+
+.marquee-link::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: -5px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(209, 209, 3);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    cursor: pointer;
+}
+
+.marquee-link:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+marquee{
+    padding: .2em 0em;
+}
+
+.marquee-right{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em 0em;
+}
+
+.logo{
+    color: var(--accent-clr);
+    cursor: pointer;
+}
+
+.nav-links-box{
+    display: flex;
+    flex-direction: row;
+    padding-left: 1em;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4em;
+}
+
+nav ul li{
+    cursor: pointer;
+    position: relative;
+    color: var(--dark-clr);
+    font-weight: 500;
+}
+
+nav ul li::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: -5px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--dark-clr);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+nav ul li:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+
+.nav-auth-box{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    padding-right: 3em;
+}
+
+.login-btn{
+    font-weight: 500;
+    background-color: white;
+    color: var(--dark-clr);
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+}
+
+.singIn-btn{
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid var(--accent-clr);
+    color: var(--dark-clr);
+    cursor: pointer;
+    font-weight: 500;
+    height: 2.2em;
+    width: 5.2em;
+    transition: .8s ease;
+}
+
+.singIn-btn:hover{
+    background-color: var(--light-accent-clr);
+    border: 2px solid var(--light-accent-clr);
+}
