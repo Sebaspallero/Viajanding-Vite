@@ -3,9 +3,11 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     background-color: white;
-    box-shadow: 0 .5rem 1.3rem rgba(63, 62, 62, 0.2);
+    box-shadow: 0 .5rem 2rem rgba(63, 62, 62, 0.2);
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
 
 }
 
@@ -20,7 +22,7 @@ header{
 }
 
 .marquee-link{
-    color: rgb(209, 209, 3);
+    color: var(--accent-clr);
 }
 
 .marquee-link::after{
@@ -42,10 +44,6 @@ header{
     left: 0; 
   }
 
-marquee{
-    padding: .2em 0em;
-}
-
 .marquee-right{
     display: flex;
     flex-direction: row;
@@ -58,10 +56,10 @@ marquee{
 nav{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     width: 100%;
-    padding: 1em 0em;
+    padding: .7em 0em;
 }
 
 .logo{
@@ -72,6 +70,7 @@ nav{
 .nav-links-box{
     display: flex;
     flex-direction: row;
+    align-items: baseline;
     padding-left: 1em;
 }
 
@@ -126,14 +125,14 @@ nav ul li:hover:after {
 }
 
 .singIn-btn{
-    border-radius: 5px;
+    border-radius: 10px;
     background: transparent;
     border: 2px solid var(--accent-clr);
     color: var(--dark-clr);
     cursor: pointer;
     font-weight: 500;
     height: 2.2em;
-    width: 5.2em;
+    width: 5.5em;
     transition: .8s ease;
 }
 

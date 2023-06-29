@@ -6,7 +6,6 @@
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
   margin: 0px;
-  scroll-padding-top: 4rem; 
   scrollbar-color: var(--accent-clr) rgba(255, 0, 0, 0);
   scrollbar-width: thin; 
 }
@@ -20,12 +19,21 @@
 
   /* COLORS */
   --accent-clr: #fcbe1c;
-  --light-accent-clr: color-mix(in srgb, var(--accent-clr) 80%, white);
+  --light-accent-clr: #fdd877;
   --purple-clr: #813e9b;
   --white-clr: #fbfafb;
-  --light-grey-clr: #fbfafb;
+  --light-grey-clr: #ebeaeb;
   --grey-clr: #626780;
   --dark-clr: #2f3042;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grey-clr);
+  border-radius: 10px;
 }
 
 body {
